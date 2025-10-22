@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Update this to match your repository name when deploying to GitHub Pages
-  base: process.env.NODE_ENV === 'production' ? '/company-landing-page/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/vulneracare-repo/' : '/',
 })
