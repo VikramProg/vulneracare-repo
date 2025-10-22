@@ -1,0 +1,37 @@
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.loading-screen,
+.error-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-screen p,
+.error-screen p {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #475569;
+  font-weight: 600;
+}

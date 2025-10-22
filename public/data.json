@@ -1,0 +1,169 @@
+{
+  "company": {
+    "name": "TechSolutions",
+    "tagline": "Your Trusted Technology Partner",
+    "logo": "TS",
+    "phone": "+1 (555) 123-4567",
+    "email": "info@techsolutions.com",
+    "address": "123 Business Street, Tech City, TC 12345",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1841!2d-73.986!3d40.748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzUyLjgiTiA3M8KwNTknMDkuNiJX!5e0!3m2!1sen!2sus!4v1234567890",
+    "socialLinks": {
+      "facebook": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "linkedin": "https://linkedin.com",
+      "instagram": "https://instagram.com"
+    }
+  },
+  "hero": {
+    "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop",
+    "slides": [
+      {
+        "id": 1,
+        "title": "Transform Your Business with Technology",
+        "subtitle": "Innovative solutions for modern challenges"
+      },
+      {
+        "id": 2,
+        "title": "Excellence in Every Solution",
+        "subtitle": "Delivering quality and reliability since day one"
+      },
+      {
+        "id": 3,
+        "title": "Your Success is Our Mission",
+        "subtitle": "Partner with us for sustainable growth"
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": 1,
+      "title": "Web Development",
+      "icon": "🌐",
+      "shortDescription": "Create stunning, responsive websites that drive results",
+      "fullDescription": "Our web development team specializes in building modern, scalable websites and web applications. We use cutting-edge technologies like React, Vue, and Angular to create fast, responsive, and user-friendly solutions. From simple landing pages to complex enterprise applications, we deliver excellence in every project. Our approach focuses on performance, SEO optimization, and cross-browser compatibility to ensure your website reaches and engages your target audience effectively.",
+      "features": [
+        "Responsive Design",
+        "SEO Optimization",
+        "Fast Loading Speed",
+        "Cross-browser Compatibility",
+        "Modern Frameworks"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Mobile App Development",
+      "icon": "📱",
+      "shortDescription": "Build powerful mobile apps for iOS and Android",
+      "fullDescription": "Transform your ideas into powerful mobile applications that users love. Our expert developers create native and cross-platform apps that deliver exceptional user experiences. Whether you need an iOS app, Android app, or both, we leverage technologies like React Native and Flutter to build robust, scalable solutions. We handle everything from concept to deployment, including UI/UX design, development, testing, and App Store optimization.",
+      "features": [
+        "Native & Cross-platform",
+        "Intuitive UI/UX",
+        "Offline Functionality",
+        "Push Notifications",
+        "App Store Optimization"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cloud Solutions",
+      "icon": "☁️",
+      "shortDescription": "Secure and scalable cloud infrastructure",
+      "fullDescription": "Migrate to the cloud with confidence. We provide comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform services. Our cloud architects design and implement scalable, secure, and cost-effective infrastructure tailored to your business needs. From cloud migration and deployment to ongoing management and optimization, we ensure your applications run smoothly in the cloud with maximum uptime and performance.",
+      "features": [
+        "Multi-cloud Support",
+        "Auto-scaling",
+        "Security & Compliance",
+        "Cost Optimization",
+        "24/7 Monitoring"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Digital Marketing",
+      "icon": "📊",
+      "shortDescription": "Grow your brand with strategic digital marketing",
+      "fullDescription": "Amplify your online presence with our data-driven digital marketing strategies. We offer comprehensive services including SEO, social media marketing, content marketing, PPC campaigns, and email marketing. Our team analyzes your market, competitors, and target audience to create customized campaigns that drive traffic, generate leads, and increase conversions. Track your ROI with detailed analytics and regular performance reports.",
+      "features": [
+        "SEO & SEM",
+        "Social Media Management",
+        "Content Strategy",
+        "Analytics & Reporting",
+        "Email Campaigns"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "UI/UX Design",
+      "icon": "🎨",
+      "shortDescription": "Create memorable user experiences",
+      "fullDescription": "Design is more than aesthetics—it's about creating intuitive, engaging experiences that users love. Our UI/UX designers combine creativity with user research to craft interfaces that are not only beautiful but also functional and accessible. We follow design thinking methodologies and conduct usability testing to ensure your product delights users and achieves business goals. From wireframes to high-fidelity prototypes, we bring your vision to life.",
+      "features": [
+        "User Research",
+        "Wireframing & Prototyping",
+        "Responsive Design",
+        "Usability Testing",
+        "Design Systems"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "IT Consulting",
+      "icon": "💼",
+      "shortDescription": "Strategic technology guidance for your business",
+      "fullDescription": "Navigate the complex technology landscape with expert guidance. Our IT consultants bring years of industry experience to help you make informed decisions about technology investments, digital transformation, and IT strategy. We assess your current systems, identify opportunities for improvement, and develop roadmaps that align technology with your business objectives. From architecture reviews to vendor selection, we're your trusted technology advisor.",
+      "features": [
+        "Technology Assessment",
+        "Digital Transformation",
+        "IT Strategy Planning",
+        "Vendor Selection",
+        "Architecture Review"
+      ]
+    }
+  ],
+  "about": {
+    "title": "About TechSolutions",
+    "description": "We are a leading technology solutions provider dedicated to helping businesses thrive in the digital age. With over 10 years of experience and a team of passionate experts, we deliver innovative solutions that drive real results.",
+    "mission": "Our mission is to empower businesses with cutting-edge technology solutions that enhance efficiency, drive growth, and create lasting value.",
+    "values": [
+      {
+        "title": "Innovation",
+        "description": "We stay ahead of technology trends to provide cutting-edge solutions"
+      },
+      {
+        "title": "Quality",
+        "description": "Excellence is not an option—it's our standard in every project"
+      },
+      {
+        "title": "Integrity",
+        "description": "We build trust through transparency and honest communication"
+      },
+      {
+        "title": "Customer Focus",
+        "description": "Your success is our success—we're committed to your goals"
+      }
+    ],
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Projects Completed"
+      },
+      {
+        "number": "250+",
+        "label": "Happy Clients"
+      },
+      {
+        "number": "10+",
+        "label": "Years Experience"
+      },
+      {
+        "number": "50+",
+        "label": "Team Members"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
+    ]
+  }
+}
