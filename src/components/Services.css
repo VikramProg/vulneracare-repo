@@ -63,17 +63,23 @@
   gap: 2rem;
   flex: 1;
   overflow: hidden;
+  /* Ensure all cards in a row have equal height */
+  align-items: stretch;
 }
 
 .service-card {
   background: white;
   border-radius: 16px;
   padding: 2.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* Clear separation from light backgrounds */
+  border: 1px solid #e2e8f0; /* slate-200 */
+  box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06), 0 8px 24px rgba(2, 6, 23, 0.06);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   animation: slideIn 0.5s ease;
+  /* Fill the grid row height so all cards match */
+  height: 100%;
 }
 
 @keyframes slideIn {
@@ -89,7 +95,9 @@
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
+  /* Slightly stronger shadow + clearer edge on hover */
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.10), 0 16px 40px rgba(2, 6, 23, 0.08);
+  border-color: #cbd5e1; /* slate-300 */
 }
 
 .service-icon {
@@ -116,6 +124,7 @@
   color: #64748b;
   line-height: 1.6;
   margin: 0 0 2rem 0;
+  /* Allow description to take available space, pushing CTA to bottom */
   flex-grow: 1;
 }
 
@@ -131,6 +140,8 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
   align-self: flex-start;
+  /* Keep button aligned to bottom regardless of content length */
+  margin-top: auto;
 }
 
 .read-more-btn:hover {
