@@ -24,6 +24,17 @@
   animation: slideUp 0.3s ease;
 }
 
+/* Hide scrollbar in contact modal if content overflows */
+.contact-modal-content {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.contact-modal-content::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari/Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
+
 .contact-modal-close {
   position: absolute;
   top: 1.5rem;

@@ -1,11 +1,16 @@
 .hero {
   position: relative;
-  height: 100vh;
+  height: 100vh; /* full viewport on desktop */
   min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+/* Use small viewport height when supported to avoid mobile UI bars issues */
+@supports (height: 100svh) {
+  .hero { height: 100svh; }
 }
 
 .hero-background {
@@ -32,7 +37,7 @@
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3; /* above scroll indicator */
   text-align: center;
   color: white !important;
   width: 100%;
@@ -89,7 +94,7 @@
 
 .hero-indicators {
   position: absolute;
-  bottom: 2rem;
+  bottom: 2.75rem; /* leave room for scroll indicator below */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -121,11 +126,12 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0.75rem; /* sit below the dots */
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   animation: bounce 2s infinite;
+  pointer-events: none; /* avoid blocking text or buttons */
 }
 
 .scroll-arrow {
@@ -161,12 +167,14 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 500px;
+    height: auto;            /* don't force full viewport height */
+    min-height: 65vh;        /* scale down hero on mobile */
   }
 
   .hero-content {
-    height: 250px;
-    padding: 1rem 2rem;
+    height: auto;            /* let content define height */
+    /* add bottom padding to reserve space for dots + arrow */
+    padding: 1.25rem 1.25rem 4.25rem 1.25rem;
   }
 
   .hero-title {
@@ -178,16 +186,12 @@
     font-size: 1.1rem;
   }
 
-  .hero-indicators {
-    bottom: 1rem;
-  }
-
-  .scroll-indicator {
-    bottom: 4rem;
-  }
+  .hero-indicators { bottom: 1.25rem; }
+  .scroll-indicator { bottom: 0.5rem; }
 }
 
 @media (max-width: 480px) {
+  .hero { min-height: 60vh; }
   .hero-title {
     font-size: 1.5rem;
   }

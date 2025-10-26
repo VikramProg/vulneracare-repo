@@ -64,7 +64,7 @@ const Footer = ({ data }) => {
           </div>
 
           <p className="footer-description">
-            Empowering businesses with innovative technology solutions that drive growth and success.
+            {data.company.contactFootTagLine}
           </p>
         </div>
 
