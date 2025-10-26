@@ -1,16 +1,17 @@
-import { useEffect } from 'react';
-import './ServiceModal.css';
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
+import "./ServiceModal.css";
 
 const ServiceModal = ({ service, onClose }) => {
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, []);
 
   const handleBackdropClick = (e) => {
-    if (e.target.classList.contains('modal-backdrop')) {
+    if (e.target.classList.contains("modal-backdrop")) {
       onClose();
     }
   };
@@ -18,14 +19,14 @@ const ServiceModal = ({ service, onClose }) => {
   const scrollToContact = () => {
     onClose();
     setTimeout(() => {
-      const element = document.getElementById('contact');
+      const element = document.getElementById("contact");
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }, 100);
   };
 
-  return (
+  return createPortal(
     <div className="modal-backdrop" onClick={handleBackdropClick}>
       <div className="modal-content">
         <button className="modal-close" onClick={onClose} aria-label="Close">
@@ -34,7 +35,7 @@ const ServiceModal = ({ service, onClose }) => {
 
         <div className="modal-header">
           <div className="modal-icon">{service.icon}</div>
-          <h2>{service.title}</h2>
+          <h2 className="text-header">{service.title}</h2>
         </div>
 
         <div className="modal-body">
@@ -57,7 +58,8 @@ const ServiceModal = ({ service, onClose }) => {
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

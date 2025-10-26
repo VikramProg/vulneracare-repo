@@ -1,11 +1,28 @@
 .services {
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
+  /* Futuristic layered glow + soft gradient */
   background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+  min-height: 80vh;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(800px 400px at 10% 0%, rgba(99, 102, 241, 0.16), transparent 60%),
+    radial-gradient(600px 300px at 90% 10%, rgba(16, 185, 129, 0.14), transparent 60%),
+    radial-gradient(1000px 500px at 50% 120%, rgba(59, 130, 246, 0.12), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .services-container {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1; /* Keep content above decorative glows */
 }
 
 .services-header {
@@ -32,6 +49,7 @@
   align-items: center;
   gap: 2rem;
   padding: 2rem 0;
+  min-height: 420px; /* More vertical space for slides and modal contrast */
 }
 
 .carousel-control {
@@ -71,9 +89,7 @@
   background: white;
   border-radius: 16px;
   padding: 2.5rem;
-  /* Clear separation from light backgrounds */
-  border: 1px solid #e2e8f0; /* slate-200 */
-  box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06), 0 8px 24px rgba(2, 6, 23, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -95,9 +111,7 @@
 
 .service-card:hover {
   transform: translateY(-8px);
-  /* Slightly stronger shadow + clearer edge on hover */
-  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.10), 0 16px 40px rgba(2, 6, 23, 0.08);
-  border-color: #cbd5e1; /* slate-300 */
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
 }
 
 .service-icon {
@@ -179,6 +193,7 @@
 }
 
 @media (max-width: 1024px) {
+  .services { min-height: auto; }
   .services-track {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -186,11 +201,16 @@
   .services-header h2 {
     font-size: 2.5rem;
   }
+
+  .services-carousel {
+    min-height: 360px;
+  }
 }
 
 @media (max-width: 768px) {
   .services {
     padding: 4rem 1rem;
+    min-height: auto; /* avoid extra empty space on mobile */
   }
 
   .services-track {
@@ -199,6 +219,7 @@
 
   .services-carousel {
     gap: 1rem;
+    min-height: 300px;
   }
 
   .carousel-control {
