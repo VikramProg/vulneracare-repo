@@ -1,28 +1,22 @@
 import { useState, useEffect } from 'react';
 import './Hero.css';
 
-function useMediaQuery(query) {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const mql = window.matchMedia(query);
-    const onChange = (e) => setMatches(e.matches);
-    setMatches(mql.matches);
-    mql.addEventListener('change', onChange);
-    return () => mql.removeEventListener('change', onChange);
-  }, [query]);
-
-  return matches;
-}
-
 const Hero = ({ data }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const slides = data.hero.slides;
 
-  // Show only on desktop/large screens with a mouse/trackpad
-  const showScrollIndicator = useMediaQuery('(min-width: 1025px) and (pointer: fine)');
+  // Detect mobile screen
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize(); // run once on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
+  // Slide auto rotation
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -51,7 +45,11 @@ const Hero = ({ data }) => {
           </div>
         ))}
 
-        <div className="hero-indicators">
+        {/* ✅ Inline visibility hidden only on mobile */}
+        <div
+          className="hero-indicators"
+          style={{ visibility: isMobile ? 'hidden' : 'visible' }}
+        >
           {slides.map((_, index) => (
             <button
               key={index}
@@ -63,11 +61,10 @@ const Hero = ({ data }) => {
         </div>
       </div>
 
-      {showScrollIndicator && (
-        <div className="scroll-indicator">
-          <div className="scroll-arrow"></div>
-        </div>
-      )}
+      {/* Optionally keep scroll indicator logic here */}
+      <div className="scroll-indicator">
+        <div className="scroll-arrow"></div>
+      </div>
     </section>
   );
 };
