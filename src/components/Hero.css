@@ -1,11 +1,10 @@
 .hero {
   position: relative;
   height: 100vh; /* full viewport on desktop */
-  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden; /* prevent any internal overflow from causing page scroll */
 }
 
 /* Use small viewport height when supported to avoid mobile UI bars issues */
@@ -94,7 +93,7 @@
 
 .hero-indicators {
   position: absolute;
-  bottom: 2.75rem; /* leave room for scroll indicator below */
+  bottom: 0.75rem; /* place dots at the bottom on desktop */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -126,7 +125,7 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: 0.75rem; /* sit below the dots */
+  bottom: 3rem; /* move arrow above the dots on desktop */
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -163,18 +162,21 @@
   .hero-subtitle {
     font-size: 1.3rem;
   }
+
+  /* Hide scroll indicator on tablets and large phones */
+  .scroll-indicator { display: none !important; }
 }
 
 @media (max-width: 768px) {
   .hero {
     height: auto;            /* don't force full viewport height */
-    min-height: 65vh;        /* scale down hero on mobile */
+    min-height: 60vh;        /* fit better on short screens */
   }
 
   .hero-content {
     height: auto;            /* let content define height */
-    /* add bottom padding to reserve space for dots + arrow */
-    padding: 1.25rem 1.25rem 4.25rem 1.25rem;
+    /* arrow hidden on mobile, reduce bottom space */
+    padding: 1.25rem 1.25rem 2rem 1.25rem;
   }
 
   .hero-title {
@@ -187,7 +189,13 @@
   }
 
   .hero-indicators { bottom: 1.25rem; }
-  .scroll-indicator { bottom: 0.5rem; }
+  /* Hide scroll indicator on mobile */
+  .scroll-indicator { display: none !important; }
+}
+
+/* Extra safety: hide on touch devices */
+@media (pointer: coarse) {
+  .scroll-indicator { display: none !important; }
 }
 
 @media (max-width: 480px) {
