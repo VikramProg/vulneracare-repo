@@ -14,6 +14,23 @@ const Header = ({ data }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Auto-collapse mobile menu on scroll to avoid sticky open menu
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const closeOnScroll = () => setIsMobileMenuOpen(false);
+    window.addEventListener('scroll', closeOnScroll, { passive: true });
+    return () => window.removeEventListener('scroll', closeOnScroll);
+  }, [isMobileMenuOpen]);
+
+  // Close menu on viewport resize to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 768 && isMobileMenuOpen) setIsMobileMenuOpen(false);
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [isMobileMenuOpen]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
