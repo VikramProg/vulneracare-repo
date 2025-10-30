@@ -50,6 +50,11 @@ const About = ({ data }) => {
             <div key={`item-${index}`} className="flow-segment">
               <div className="flow-item">
                 <img className="flow-image" src={image} alt={`Team collaboration ${index + 1}`} />
+                <div className="flow-overlay">
+                  {data.about.imageTaglines && data.about.imageTaglines[index] ? (
+                    <span>{data.about.imageTaglines[index]}</span>
+                  ) : null}
+                </div>
               </div>
               {index < data.about.images.length - 1 && (
                 <div className="flow-arrow" aria-hidden="true">

@@ -166,6 +166,11 @@
       ".././assets/cyberSecuirtyExperts.jpg",
       ".././assets/collabration.jpg",
       ".././assets/customerSuccess.jpg"
+    ],
+    "imageTaglines": [
+      "Trusted cybersecurity experts at your side",
+      "Collaboration that strengthens your defenses",
+      "Customer success through secure solutions"
     ]
   }
 }
