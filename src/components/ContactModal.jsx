@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import "./ContactModal.css";
 
 const ContactModal = ({ data, onClose }) => {
@@ -15,7 +16,7 @@ const ContactModal = ({ data, onClose }) => {
     }
   };
 
-  return (
+  return createPortal(
     <div className="contact-modal-backdrop" onClick={handleBackdropClick}>
       <div className="contact-modal-content">
         <button
@@ -110,7 +111,7 @@ const ContactModal = ({ data, onClose }) => {
         </div>
       </div>
     </div>
-  );
+  , document.body);
 };
 
 export default ContactModal;
