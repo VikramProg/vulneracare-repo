@@ -6,8 +6,8 @@
     "logo": "VC",
     "phone": "+917406807128",
     "email": "abdulfarooqf8@gmail.com",
-    "address": "123 Business Street, Tech City, TC 12345",
-    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1841!2d-73.986!3d40.748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzUyLjgiTiA3M8KwNTknMDkuNiJX!5e0!3m2!1sen!2sus!4v1234567890",
+    "address": "Our team collaborates across time zones to serve clients worldwide.",
+    "mapUrl": "https://www.google.com/maps",
     "socialLinks": {
       "facebook": "https://facebook.com",
       "twitter": "https://twitter.com",
@@ -16,7 +16,7 @@
     }
   },
   "hero": {
-    "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop",
+    "backgroundImage":   ".././assets/heroBack.jpg",
    "slides": [
   {
     "id": 1,
@@ -163,9 +163,9 @@
       }
     ],
     "images": [
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
+      ".././assets/cyberSecuirtyExperts.jpg",
+      ".././assets/collabration.jpg",
+      ".././assets/customerSuccess.jpg"
     ]
   }
 }

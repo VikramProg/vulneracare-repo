@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import Footer from './components/Footer';
+import CTABanner from './components/CTABanner';
 import './App.css';
 
 function App() {
@@ -46,6 +47,12 @@ function App() {
       <Hero data={data} />
       <Services data={data} />
       <About data={data} />
+      {/* Overlap anchor: CTABanner is absolutely positioned here so it straddles sections */}
+      <div className="cta-overlap-anchor">
+        <CTABanner
+          data={data}
+        />
+      </div>
       <Footer data={data} />
     </div>
   );

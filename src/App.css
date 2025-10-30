@@ -35,3 +35,19 @@
   color: #475569;
   font-weight: 600;
 }
+
+/* Placement helper: make CTABanner straddle About/Footer boundary */
+.cta-overlap-anchor {
+  position: relative;
+  height: 0;              /* occupy no vertical space */
+  z-index: 5;             /* above section backgrounds */
+}
+
+/* Absolutely position the banner so its center sits on the boundary */
+.cta-overlap-anchor .cta-outer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%); /* half over previous, half over next */
+  pointer-events: auto;         /* keep button clickable */
+}

@@ -99,10 +99,11 @@ const ContactModal = ({ data, onClose }) => {
             </div>
 
             <div className="contact-info-item">
-              <div className="contact-icon">📍</div>
+              <div className="contact-icon">🌐 </div>
+
               <div className="contact-details">
-                <h4>Address</h4>
-                <p>{data.address}</p>
+                <h4>We Work Remotely</h4>
+                <a href="">{data.address}</a>
               </div>
             </div>
           </div>

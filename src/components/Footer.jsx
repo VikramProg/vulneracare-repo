@@ -98,7 +98,7 @@ const Footer = ({ data }) => {
           <div className="">
             <div className="remote-banner">
               🌐 <strong>We Work Remotely</strong><br />
-              Our team collaborates across time zones to serve clients worldwide.
+              {data.company.address}
             </div>
           </div>
 

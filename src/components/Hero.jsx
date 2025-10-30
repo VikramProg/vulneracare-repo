@@ -2,9 +2,29 @@ import { useState, useEffect } from 'react';
 import './Hero.css';
 
 const Hero = ({ data }) => {
+  // Resolve backgroundImage value from src/assets when path comes from JSON
+  const assetUrlByName = (() => {
+    const modules = import.meta.glob('../assets/*.{png,jpg,jpeg,svg,gif,webp}', {
+      eager: true,
+      import: 'default',
+    });
+    const byName = {};
+    for (const [key, url] of Object.entries(modules)) {
+      const name = key.split('/').pop();
+      if (name) byName[name] = url;
+    }
+    return byName;
+  })();
+
+  const resolveAsset = (p) => {
+    const name = (p || '').split('/').pop();
+    return (name && assetUrlByName[name]) || p;
+  };
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const slides = data.hero.slides;
+  const bgUrl = resolveAsset(data.hero.backgroundImage);
 
   // Detect mobile screen
   useEffect(() => {
@@ -24,11 +44,13 @@ const Hero = ({ data }) => {
     return () => clearInterval(interval);
   }, [slides.length]);
 
+
+
   return (
     <section className="hero">
       <div
         className="hero-background"
-        style={{ backgroundImage: `url(${data.hero.backgroundImage})` }}
+        style={{ backgroundImage: `url(${bgUrl})` }}
       >
         <div className="hero-overlay"></div>
       </div>
