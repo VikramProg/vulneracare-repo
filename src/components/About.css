@@ -318,3 +318,33 @@
     font-size: 0.8rem;
   }
 }
+
+/* Put the left space on the container */
+.about-flow {
+  padding-left: 56px;
+}
+@media (max-width: 768px) {
+  .about-flow {
+    padding-left: 48px;
+  }
+}
+
+/* Cards can now be full width */
+.flow-item {
+  margin-left: 0;          /* remove the margin that caused overflow */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Same responsive image rules */
+.flow-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;    /* optional */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Optional guard */
+.about { overflow-x: clip; }
