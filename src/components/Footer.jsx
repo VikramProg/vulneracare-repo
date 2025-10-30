@@ -92,24 +92,18 @@ const Footer = ({ data }) => {
               <span className="contact-icon">📞</span>
               <a href={`tel:${data.company.phone}`}>{data.company.phone}</a>
             </div>
-            <div className="contact-item">
-              <span className="contact-icon">📍</span>
-              <span>{data.company.address}</span>
+
+          </div>
+
+          <div className="">
+            <div className="remote-banner">
+              🌐 <strong>We Work Remotely</strong><br />
+              Our team collaborates across time zones to serve clients worldwide.
             </div>
           </div>
 
-          <div className="footer-map">
-            <iframe
-              src={data.company.mapUrl}
-              width="100%"
-              height="150"
-              style={{ border: 0, borderRadius: '8px' }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Company Location"
-            ></iframe>
-          </div>
+
+
         </div>
       </div>
 
