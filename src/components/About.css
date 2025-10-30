@@ -93,7 +93,29 @@
   height: 260px;
   object-fit: cover;
   border-radius: 12px;
+  transition: transform 300ms ease, filter 300ms ease;
 }
+
+.flow-item { position: relative; overflow: hidden; }
+.flow-overlay {
+  position: absolute;
+  inset: 0.5rem; /* match inner padding so overlay sits over image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  line-height: 1.3;
+  border-radius: 12px;
+  opacity: 0;
+  background: rgba(2, 6, 23, 0.35);
+  transition: opacity 250ms ease;
+}
+
+.flow-item:hover .flow-overlay { opacity: 1; }
+.flow-item:hover .flow-image { filter: blur(3px) brightness(0.7); transform: scale(1.02); }
 
 .flow-arrow {
   height: 48px;

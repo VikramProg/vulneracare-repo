@@ -14,6 +14,10 @@ const Header = ({ data }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -25,7 +29,7 @@ const Header = ({ data }) => {
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <div className="header-logo">
+        <div className="header-logo" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
           <div className="logo-icon">{data.company.logo}</div>
           <div className="logo-text">
             <h1>{data.company.name}</h1>

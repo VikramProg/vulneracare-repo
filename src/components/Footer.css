@@ -1,4 +1,5 @@
 .footer {
+   padding-top: 6% !important;
   background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
   color: white;
   padding: 4rem 2rem 0 2rem;
@@ -176,6 +177,9 @@ color: white;}
 }
 
 @media (max-width: 1024px) {
+  .footer {
+      padding-top: 10% !important;
+  }
   .footer-container {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -189,6 +193,7 @@ color: white;}
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 1rem 0 1rem;
+    padding-top: 25% !important;
   }
 
   .footer-container {
