@@ -44,7 +44,8 @@ const SEO = ({ data }) => {
     const { company, about } = data;
     const siteName = company?.name || 'Website';
     const tagline = company?.tagline || '';
-    const description = (about && about.description) || tagline || '';
+    const longDesc = (about && about.description) || '';
+    const description = (tagline || longDesc).toString().slice(0, 160);
 
     const origin = window.location.origin;
     const base = import.meta.env.BASE_URL || '/';
@@ -71,6 +72,7 @@ const SEO = ({ data }) => {
     upsertMeta({ property: 'og:description', content: description });
     upsertMeta({ property: 'og:url', content: siteUrl });
     upsertMeta({ property: 'og:image', content: ogImage });
+    upsertMeta({ property: 'og:locale', content: 'en_US' });
 
     // Twitter Card
     upsertMeta({ name: 'twitter:card', content: 'summary_large_image' });
@@ -118,4 +120,3 @@ const SEO = ({ data }) => {
 };
 
 export default SEO;
-
