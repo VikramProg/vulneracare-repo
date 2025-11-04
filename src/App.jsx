@@ -5,6 +5,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Footer from './components/Footer';
 import CTABanner from './components/CTABanner';
+import SEO from './components/SEO';
 import './App.css';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <div className="app">
+      <SEO data={data} />
       <Header data={data} />
       <Hero data={data} />
       <Services data={data} />

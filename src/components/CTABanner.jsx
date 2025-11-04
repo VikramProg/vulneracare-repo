@@ -9,7 +9,7 @@ const CTABanner = ({ data }) => {
       <div className="cta-container">
         <div className="cta-banner">
           <div className="cta-text">
-            DEVELOP FASTER WITH LESS RISK
+            Enjoy 10% off your first service with us.
           </div>
           <div className="cta-actions">
             <button className="cta-button" onClick={() => setIsContactModalOpen(true)}>
