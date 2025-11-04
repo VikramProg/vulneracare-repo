@@ -62,7 +62,7 @@ const Hero = ({ data }) => {
             className={`hero-slide ${index === currentSlide ? 'active' : ''} ${index === (currentSlide - 1 + slides.length) % slides.length ? 'exit' : ''
               }`}
           >
-            <h1 className="hero-title">{slide.title}</h1>
+            <h2 className="hero-title">{slide.title}</h2>
             <p className="hero-subtitle">{slide.subtitle}</p>
           </div>
         ))}
