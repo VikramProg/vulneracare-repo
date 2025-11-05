@@ -73,7 +73,7 @@ const About = ({ data }) => {
           ))}
         </div>
 
-        <div className="about-content">
+        <div id="aboutStart" className="about-content">
           <h2>{data.about.title}</h2>
           <p className="about-description">{data.about.description}</p>
           <p className="about-mission">{data.about.mission}</p>

@@ -55,7 +55,7 @@ const Header = ({ data }) => {
         </div>
 
         <nav className={`header-nav ${isMobileMenuOpen ? 'open' : ''}`}>
-          <button onClick={() => scrollToSection('about')}>About</button>
+          <button onClick={() => scrollToSection('aboutStart')}>About</button>
           <button onClick={() => scrollToSection('services')}>Services</button>
           <button onClick={() => scrollToSection('contact')}>Contact</button>
         </nav>

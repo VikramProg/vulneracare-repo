@@ -120,7 +120,7 @@
   color: white;
 }
 
-.header-social-icons .social-icon.instagram {
+.header-social-icons .social-icon.github {
   background: rgba(255, 255, 255, 0.2);
   color: white;
 }
@@ -158,6 +158,11 @@
 .contact-icon {
   font-size: 2.5rem;
   flex-shrink: 0;
+}
+
+/* Make the phone icon white in the phone row */
+.contact-info-grid .contact-info-item:nth-child(2) .contact-icon {
+  color: #ffffff;
 }
 
 .contact-details {
