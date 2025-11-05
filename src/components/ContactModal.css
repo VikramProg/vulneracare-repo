@@ -160,6 +160,11 @@
   flex-shrink: 0;
 }
 
+/* Make the phone icon white in the phone row */
+.contact-info-grid .contact-info-item:nth-child(2) .contact-icon {
+  color: #ffffff;
+}
+
 .contact-details {
   flex: 1;
 }

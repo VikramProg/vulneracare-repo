@@ -89,7 +89,11 @@ const Footer = ({ data }) => {
               <a href={`mailto:${data.company.email}`}>{data.company.email}</a>
             </div>
             <div className="contact-item">
-              <span className="contact-icon">📞</span>
+              <span className="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="1.2em" height="1.2em">
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.07 22 2 13.93 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58.13.36.05.77-.23 1.05l-2.22 2.16z" />
+                </svg>
+              </span>
               <a href={`tel:${data.company.phone}`}>{data.company.phone}</a>
             </div>
 
@@ -97,7 +101,7 @@ const Footer = ({ data }) => {
 
           <div className="">
             <div className="remote-banner">
-              🌐 <strong>We Work Remotely</strong><br />
+              🌎 <strong>We Work Remotely</strong><br />
               {data.company.address}
             </div>
           </div>
@@ -117,3 +121,4 @@ const Footer = ({ data }) => {
 };
 
 export default Footer;
+
